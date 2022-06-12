@@ -1,0 +1,30 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 2em;
+
+  span {
+    color: hsl(0, 0%, 98%);
+    font-size: 1.5em;
+    margin: 0px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    user-select: none;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 24px;
+    transition: 0.3s linear;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+  }
+}

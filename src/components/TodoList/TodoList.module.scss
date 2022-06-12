@@ -1,0 +1,32 @@
+.content{
+  width: 100%;
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    margin-top: 1em;
+  
+    & > li:first-child {
+      border-radius: var(--radii) var(--radii) 0 0;
+    }
+  }
+  
+  
+  
+  .infodrag {
+    width: 100%;
+    color: var(--faded-text);
+    margin-top: 7em;
+    margin-bottom: 4em;
+    text-align: center;
+    user-select: none;
+  
+    @media (min-width: 431px) {
+      margin-top: 3em;
+    }
+  }
+}

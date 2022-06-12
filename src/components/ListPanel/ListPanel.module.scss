@@ -1,0 +1,36 @@
+span,
+.panel,
+.deleteCompleted {
+  transition: 0.3s linear;
+}
+
+.panel {
+  position: relative;
+  background-color: var(--base-ui);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  border-radius: 0 0 var(--radii) var(--radii);
+
+  span {
+    height: 0.7rem;
+    font-size: 0.7rem;
+    color: var(--faded-text);
+  }
+
+  .deleteCompleted {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: var(--base-ui);
+
+    &:hover,
+    &:focus {
+      span {
+        color: var(--color);
+      }
+    }
+  }
+}

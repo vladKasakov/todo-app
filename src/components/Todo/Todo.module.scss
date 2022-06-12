@@ -1,0 +1,14 @@
+.todo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+
+  @media (min-width: 585px) {
+    width: 527px;
+  }
+  @media (max-width: 265px) {
+    min-width: 238px;
+  }
+}

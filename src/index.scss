@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+:root {
+  --bright-blue: hsl(220, 98%, 61%);
+  --radii: 0.25em;
+}
+
+body[data-theme='light'] {
+  --base-ui: hsl(0, 0%, 98%);
+  --bg-color: hsl(236, 33%, 92%);
+  --color: hsl(235, 19%, 35%);
+  --border-color: hsl(236, 9%, 61%);
+  --faded-text: hsl(233, 11%, 84%);
+  --bg-image-url: url('./assets/bg-mobile-light.jpg');
+  @media (min-width: 376px) {
+    --bg-image-url: url('./assets/bg-desktop-light.jpg');
+  }
+}
+
+body[data-theme='dark'] {
+  --base-ui: hsl(235, 24%, 19%);
+  --bg-color: hsl(235, 21%, 11%);
+  --color: hsl(234, 39%, 85%);
+  --border-color: hsl(237, 14%, 26%);
+  --faded-text: hsl(233, 14%, 35%);
+  --bg-image-url: url('./assets/bg-mobile-dark.jpg');
+  @media (min-width: 376px) {
+    --bg-image-url: url('./assets/bg-desktop-dark.jpg');
+  }
+}
+
+body {
+  background-color: var(--bg-color);
+  background-image: var(--bg-image-url);
+  background-repeat: no-repeat;
+  transition: background-color 0.3s linear, background-image 0.3s linear;
+  -webkit-transition: background-color 0.3s linear, background-image 0.3s linear;
+
+  @media (min-width: 1440px) {
+    background-size: 100%;
+  }
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

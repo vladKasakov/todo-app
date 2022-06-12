@@ -1,0 +1,51 @@
+.filter,
+button {
+  background-color: var(--base-ui);
+  transition: background-color 0.3s linear, color 0.3s linear,
+    transform 0.3s linear;
+}
+
+.filter {
+  position: absolute;
+  left: 0;
+  bottom: -4em;
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  border-radius: var(--radii);
+
+  button {
+    border: none;
+    outline: none;
+    color: var(--color);
+    cursor: pointer;
+    font-size: 0.7em;
+    font-weight: bold;
+
+    &:disabled {
+      cursor: default;
+    }
+
+    &:not(:disabled):hover,
+    &:focus {
+      transform: translateY(-3px);
+    }
+  }
+
+  .active {
+    color: var(--bright-blue);
+  }
+
+  @media (min-width: 431px) {
+    & {
+      position: static;
+      padding: 0;
+      margin: 0 1em;
+      width: auto;
+      justify-content: space-between;
+    }
+  }
+}

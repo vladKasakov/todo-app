@@ -1,0 +1,31 @@
+form,
+.circle,
+.input {
+  transition: 0.3s linear;
+  background-color: var(--base-ui);
+  color: var(--color);
+}
+
+form {
+  border-radius: var(--radii);
+  display: flex;
+  width: 100%;
+  margin-top: 1em;
+  padding: 1em;
+
+  .circle {
+    appearance: none;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    height: 24px;
+    min-width: 24px;
+    margin-right: 1em;
+  }
+
+  .input {
+    caret-color: var(--bright-blue);
+    border: none;
+    outline: none;
+    width: 100%;
+  }
+}
